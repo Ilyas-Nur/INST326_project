@@ -33,7 +33,7 @@ def displayCharts():
     plt.pie(pie_data, labels = pie_label, colors = colors, autopct='%.0f%%')
 
     #PLEASE READ STATEMENT BELOW:
-    #boxplot (to display boxplot comment out plt.pie command above and uncomment below)
+    #boxplot (to display boxplot comment out plt.pie command above and uncomment code below)
     #sns.boxplot(x=cars.horsepower).set(xlabel = "Horsepower", title='Boxplot of Vehicle Horsepower')
 
     plt.show()
