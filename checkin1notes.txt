@@ -4,7 +4,7 @@ Each of has to do 2 methods. We need 1 more method idea. Put name next to method
 -init method - 
 -parse_args() - 
 -read car data file with regex - Ilyas
--loan terms - 
+-loan terms - Jose
 -date influence on price - Ilyas
 -inventory mgmt - Thomas
 -chart with pyplot and or seaborn - Thomas
