@@ -1,0 +1,12 @@
+Main function:
+Welcome
+input for customer profile. make customer object
+
+
+Welcome
+Here are the vehicles available for purchase. print showroom (list of inventory):
+display plots of cars
+Are you looking for a particular make, year, ? input (type in filter)
+redisplays all cars with filter.
+type in exactly car you want. input
+purchase method grabs vehicle and assigns attributes to vehicle (owner, msrp (adjustable based on credit score, college_student, season, clean driving record))
