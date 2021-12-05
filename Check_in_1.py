@@ -26,7 +26,7 @@ def holiday_szn():
     x = datetime.datetime.now()
     
     if x.strftime("%B") == "November":
-        if int(x.strftime("%d")) >= 15:
+        if int(x.strftime("%d")) >= 13:
             print("It's almost Turkey day! Here's a discount")
             return True
         else:
