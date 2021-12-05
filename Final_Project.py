@@ -34,10 +34,13 @@ class Vehicle(Dealership):
          Attributes:
             - year (str): Year of vehicle
             - make (str): Make of vehicle
+            - owner (str): Owner of vehicle
+            - title
             - model (str): Model of vehicle
             - type (str): Type of vehicle (sedan, hatchback, truck, SUV, van, coupe)
             - fuel_type (str): The type of fuel the vehicle takes
             - msrp (int): The price of the vehicle
+            - purchase_history (list)
             - adj_price: Revised price based on positive customer attributes
             
     """
@@ -74,8 +77,7 @@ class Vehicle(Dealership):
             # self.type = match.group("type")
             # self.fuel_type = match.group("fuel_type")
             # self.msrp = match.group("msrp")
-            # self.adj_price = match.group("adj_price")
-            #
+            
         #else:
             #raise ValueError
         
@@ -85,28 +87,10 @@ class Vehicle(Dealership):
     ##basic_car_info will be a focus group that gets the year, make and model cause 
     # we want just basic info in the showroom
         
-def read_vehicles(filename, file2 = "", file3 = ""):
-    """
-        Could read vehicles form up to three files, after that the dealership
-        would be full.
-        
-        Args:
-            - filename (str): A path to a file containing one vehicle per line
-            - file2 (str): An OPTIONAL path to a file containing one vehicle per line
-            - file3 (str): An OPTIONAL path to a file containing one vehicle per line
+
             
-        Side effects:
-            - Every object will be stored in the list "list_vehicles"
-            
-        Returns:
-            - vehicles (list): A list of one instance of 'Vehicle' per line in the
-            file. (Store this in dealership 'showroom' attribute)
-            
-            
-        
-    """
     
-class Customer(Vehicle):
+class Customer():
     """
         This class enables us to create customer objects who will purchase a
         vehicle.
@@ -114,10 +98,11 @@ class Customer(Vehicle):
         Attributes:
             name (str): The name of the customer
             age (int): The age of the customer
+            owned_vehicles (list)
             credit_score (int): The credit score of the cusotmer
             college_student (bool): True if customer is enrolled in college, False
             otherwise.
-            driving_record (list): List of previous accidents drivers been in
-            
+            driving_record (list): List of previous accidents drivers been in        
     """
+    
     pass
