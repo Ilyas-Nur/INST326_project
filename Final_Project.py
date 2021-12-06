@@ -1,16 +1,6 @@
-"""A simple ......."""
-
-#thomas made an edit
-
-"""The Packers play thursday night"""
-
-#ilyas made an edit
-
-"""The Ravens lost to the Bengals"""
-#Jose made an edit
-
 import re
 import math
+import datetime
 
 class Dealership:
     """
@@ -25,7 +15,65 @@ class Dealership:
             - holiday_szn (bool): optional only when its the holidays. Subtracts
             $1,000 from vehicle MSRP.   
     """
-    pass
+    
+    def __init__(self, name, general_apr, car_shipment):
+        self.name = name
+        self.general_apr = general_apr
+        self.car_shipment = car_shipment
+        
+        with open(self.car_shipment, "r", encoding = "utf-8") as f:
+            list_vehicles = [Vehicle(line) for line in f]
+            self.car_shipment = list_vehicles
+
+    def holiday_szn():
+        """
+
+            This method determines whether the current day we're in is close to a holiday
+
+            If the day is past or on the 15th of the month of November, its Thanksgiving season
+            
+            If the day is past or on the 15th of the month of December, its Christmas season
+            
+            If the day is before or on the 15th of the month of January, its New Year's season
+            
+            If not, returns None (Falsy)
+            
+            Args:
+                x (optionl):A date if you would actually like to specify. Could be handy if you
+                are planning to buy a car that dar
+            
+            Returns:
+                True or False: Depending on the currrent day and month
+            
+        """
+        x = datetime.datetime.now()
+        
+        if x.strftime("%B") == "November":
+            if int(x.strftime("%d")) >= 13:
+                print("It's almost Turkey day! Here's a discount")
+                return True
+            else:
+                print("Its not the holidays, so unfortuntely no discount")
+            
+        elif x.strftime("%B") == "December":
+            if int(x.strftime("%d")) >= 15:
+                print("It's almost Christmas. Your present is a discount!")
+                return True
+            else:
+                print("Its not the holidays just yet!, so unfortuntely no discount")
+            
+        elif x.strftime("%B") == "January":
+            if int(x.strftime("%d")) <= 15:
+                print("We are still in the holiday spirit from the New Year, have a discount!")
+                return True
+            else:
+                print("Its not the holidays anymore, so unfortuntely no discount")
+            
+        elif x.strftime("%B") != "November" and x.strftime("%B") != "December" and x.strftime("%B") != "January":
+            print("Its not the holidays, so unfortuntely no discount")
+            return False
+        
+
 
 class Vehicle(Dealership):
     """
@@ -44,9 +92,7 @@ class Vehicle(Dealership):
             - adj_price: Revised price based on positive customer attributes
             
     """
-    ## We can override general delearship interest rate in this class when customer has credit score
-    #above 700
-    
+   
     def __init__(self, vehicle_info):
         """
             Takes a single line of text as an argument when instatiating the class
@@ -64,33 +110,39 @@ class Vehicle(Dealership):
         """
         
         regex = """
-        
-        
-        
+        (?x)
+        ^
+        (?P<Car_Name>(?P<Year>\d{4})
+        \s
+        (?P<Make>\S+)
+        \s
+        (?P<Model>[^,]+)),
+        \s
+        ((?P<Car_Type>\([^,]+),)?
+        (?P<Fuel_Type>[^,]+)?,
+        \s
+        (?P<MSRP>\$\S+)?
         """
         
-        #if re.search(regex, vehicle_info):
-            # match = re.search(regex, vehicle_info)
-            # self.year = match.group("year")
-            # self.make = match.group("make")
-            # self.model = match.group("model")
-            # self.type = match.group("type")
-            # self.fuel_type = match.group("fuel_type")
-            # self.msrp = match.group("msrp")
+        if re.search(regex, vehicle_info):
+            match = re.search(regex, vehicle_info)
             
-        #else:
-            #raise ValueError
+            self.car_name = match.group("Car_Name") # Captures Year, Make, and Model
+            self.year = match.group("Year") # Captures year of vehicle
+            self.make = match.group("Make") # Captures make of vehicle
+            self.model = match.group("Model") # Captures model of vehicle
+            self.type = match.group("Car_Type") # Captures car type (Sedan, SUV) if vehicles specify
+            self.fuel_type = match.group("Fuel_Type") # Captures the fuel type of vehicle
+            self.msrp = match.group("MSRP") # Captures the MSRP of vehicle
+            
+        else:
+            raise ValueError ##
         
-    ##[dealershipname].showroom.append(basic_car_info) ##To add to the delarship 
-    # #### Above is IMPORTANT!!!
-    
-    ##basic_car_info will be a focus group that gets the year, make and model cause 
-    # we want just basic info in the showroom
         
 
             
-    
-class Customer():
+            
+class Customer:
     """
         This class enables us to create customer objects who will purchase a
         vehicle.
