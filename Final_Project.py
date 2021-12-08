@@ -56,7 +56,7 @@ class Dealership:
                 print("Its not the holidays, so unfortuntely no discount")
             
         elif x.strftime("%B") == "December":
-            if int(x.strftime("%d")) >= 15:
+            if int(x.strftime("%d")) >= 13:
                 print("It's almost Christmas. Your present is a discount!")
                 return True
             else:
@@ -110,24 +110,24 @@ class Vehicle(Dealership):
         """
         
         regex = """
-        (?x)
-        ^
-        (?P<Car_Name>(?P<Year>\d{4})
-        \s
-        (?P<Make>\S+)
-        \s
-        (?P<Model>[^,]+)),
-        \s
-        ((?P<Car_Type>\([^,]+),)?
-        (?P<Fuel_Type>[^,]+)?,
-        \s
-        (?P<MSRP>\$\S+)?
+            (?x)
+            ^
+            (?P<Name>(?P<Year>\d{4})
+            \s
+            (?P<Make>\S+)
+            \s
+            (?P<Model>[^,]+)),
+            \s
+            ((?P<Car_Type>\([^,]+),)?
+            (?P<Fuel_Type>[^,]+)?,
+            \s
+            (?P<MSRP>\$\S+)?
         """
         
         if re.search(regex, vehicle_info):
             match = re.search(regex, vehicle_info)
             
-            self.car_name = match.group("Car_Name") # Captures Year, Make, and Model
+            self.name = match.group("Name") # Captures Year, Make, and Model
             self.year = match.group("Year") # Captures year of vehicle
             self.make = match.group("Make") # Captures make of vehicle
             self.model = match.group("Model") # Captures model of vehicle
@@ -135,8 +135,17 @@ class Vehicle(Dealership):
             self.fuel_type = match.group("Fuel_Type") # Captures the fuel type of vehicle
             self.msrp = match.group("MSRP") # Captures the MSRP of vehicle
             
+            return f"""
+                        Car Name: {self.name}, 
+                        Year: {self.year}, 
+                        Make:{self.make}, 
+                        Type {self.type}, 
+                        Fuel Type: {self.fuel_type}
+                        MSRP: {self.msrp}
+                    """
+            
         else:
-            raise ValueError ##
+            raise ValueError #Raises ValueError if there is a match not found
         
         
 
@@ -150,11 +159,12 @@ class Customer:
         Attributes:
             name (str): The name of the customer
             age (int): The age of the customer
-            owned_vehicles (list)
-            credit_score (int): The credit score of the cusotmer
+            owned_cars (Boolean): If new car owner
+            credit_score (int): The credit score of the customer
             college_student (bool): True if customer is enrolled in college, False
             otherwise.
             driving_record (list): List of previous accidents drivers been in        
     """
     
-    pass
+    #def _init__(name, age, owned_cars, credit score, coll_student, driving_record):
+        #pass
