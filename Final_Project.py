@@ -83,7 +83,6 @@ class Vehicle(Dealership):
             - year (str): Year of vehicle
             - make (str): Make of vehicle
             - owner (str): Owner of vehicle
-            - title
             - model (str): Model of vehicle
             - type (str): Type of vehicle (sedan, hatchback, truck, SUV, van, coupe)
             - fuel_type (str): The type of fuel the vehicle takes
@@ -143,11 +142,19 @@ class Vehicle(Dealership):
                         Fuel Type: {self.fuel_type}
                         MSRP: {self.msrp}
                     """
+                    ###Creates a dictionary. This dictionary will be appended for every vehicle shown in Dealersh
             
         else:
             raise ValueError #Raises ValueError if there is a match not found
         
         
+    def get_msrp(self, vehicle_name):
+        pass
+        ###Gets the msrp of a particular vehicle
+        
+    def get_owner(self, vehicle_name):
+        ##Gets the name of the owner only if the vehicle was purchased, if not return an error
+        pass
 
             
             
@@ -168,3 +175,9 @@ class Customer:
     
     #def _init__(name, age, owned_cars, credit score, coll_student, driving_record):
         #pass
+        
+    def purchase(self, vehicle_name):
+        pass
+    
+    def loan_terms():
+        pass
