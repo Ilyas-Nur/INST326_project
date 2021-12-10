@@ -1,0 +1,41 @@
+2022 Tesla Model 3, (Sedan), Electric, $44_990
+2022 Lexus ES, (Sedan), Gas, $50_000
+2022 Audi A6, Gas, $89_000
+2022 BMW 530, Gas, $50_000
+2021 BMW 750, Gas, $59_000
+2022 Porsche Panamera, Gas, $95_700
+2022 Genesis G90, Gas, $73_950
+2022 Mercedes-Benz E400, Electric, $70_000
+2022 Jaguar F-Type, Gas, $69_000
+2016 Audi S5, Gas, $31_270
+2017 Mercedes-Benz S550, Gas, $60_000
+2018 BMW 540, Gas, $36_590
+2017 Toyota RAV4, (SUV), Gas, $24_000
+2018 Honda Accord, (Sedan), Gas, $21_000
+2022 Toyota Camry, Hybrid, $27_000
+2022 McLaren Artura, (Coupe), Gas, $227_000
+2022 Acura TLX, (Sedan), Gas, $37_700
+2022 Acura MDX, (SUV), Electric, $57_000
+2020 Genesis G70, Gas, $37_525
+2021 Ferrari Portofino, (Coupe), Gas, $213_054
+2020 Ford Explorer, (SUV), Gas, $27_000
+2022 Nissan Altima, Gas, $21_000
+2017 Toyota Corolla, Gas, $15_000
+2017 Toyota Yaris, Gas, $8_560
+2022 BMW M5, Gas, $103_500
+2021 Chrysler Pacifica, Gas, $37_000
+2022 Hyundai Sonata, Gas, $24_150
+2022 Hyundai Tucson, (SUV), Gas, $24_950
+2022 Kia Sportage, (SUV), Gas, $24_090
+2022 Tesla Model 3, (Sedan), Electric, $45_000
+2017 Mercedes-Benz S550, Gas, $60_000
+2021 Ferrari Portofino, (Coupe), Gas, $213_054
+2021 Toyota Highlander, Hybrid, $35_085
+2018 Honda Accord, (Sedan), Gas, $21_000
+2022 BMW i8, Electric, $147_500
+2022 BMW 750i xDrive, Gas, $103_000
+2022 Lexus ES, (Sedan), Gas, $50_000
+2022 Hyundai Sonata, Gas, $24_150
+2016 Toyota Corolla, Gas, $15_000
+2021 Toyota Sienna, (Van), Gas, $34_500
+2022 Nissan Maxima, Gas, $23_000
