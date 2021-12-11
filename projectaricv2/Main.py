@@ -5,6 +5,14 @@ from colorama import Fore, Style
 
 
 def questionnaire(car_list):
+    """This class filters the showroom list from the Dealership file
+    Args:
+        car_list(list of strings): This is the list showroom from the Dealership file
+    Returns:
+        The method returns a filtered list dependant on the users inputs
+    Raises:
+        ValueError: If the input given isn't a number, a value error is raised
+    """
     filtered_list = []
     desires_eco = input(Fore.LIGHTBLUE_EX + "Do you want an eco-friendly car (y/n)? :: "+ Fore.WHITE).lower()
     if desires_eco == "n":
@@ -39,6 +47,11 @@ def questionnaire(car_list):
 
 
 def console_displayer():
+    """This method creates a user interface, which provides user inputs to show filtered list
+    based on user defined criteria
+    Side effects:
+    prints the filtered list from the questionnaire method 
+    """
     colorama.init(autoreset=True)
     dealership = Dealership(0.8, "car_shipment2022.txt")
     print(Fore.RED + Style.BRIGHT + "Welcome to the Dealership!")
