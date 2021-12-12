@@ -24,7 +24,12 @@ class Dealership:
         
         with open(self.car_shipment, "r", encoding = "utf-8") as f:
             self.showroom = [Vehicle(line) for line in f]
-    
+            
+    def search(self, descriptor):
+        filtered_list = [car for car in self.car_shipment if descriptor in car]
+        return filtered_list       
+        
+        
     def check_holiday(self):
         """
             This method determines whether the current day we're in is close to a holiday
