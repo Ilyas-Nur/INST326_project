@@ -1,0 +1,11 @@
+CAR PURCHASE RECEIPT
+---------------------------------
+Date of Purchase: 12/11/21
+Customer Name: Thomas
+Car Purchased: 2021 Toyota Highlander
+Default MSRP: $35085
+Holiday Price Reduction: -$1000
+Final Total MSRP: $34085
+Calculated Monthly Payment Required + Interest:  520.0
+
+Thank you for your purchase!
