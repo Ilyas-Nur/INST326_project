@@ -11,12 +11,19 @@ class Dealership:
         and deals for customers. 
 
         Attributes:
-            - name (str): name of dealership
             - showroom (list): List of cars currently for sale
             - general_apr (int): General interest rate charged to customers
-            - car_shipment ..
+            - car_shipment (list): List of Vehicle objects
     """
     def __init__(self, general_apr, car_shipment):
+        """
+            Requires an APR and a car shipment when instatiating the class. Assigns 
+            attributes.
+
+            Side effects:
+                - Instantiates Vehicle objects
+                - Appends those objects to self.showroom
+        """
     
         self.general_apr = general_apr
         self.car_shipment = car_shipment
@@ -26,6 +33,15 @@ class Dealership:
             self.showroom = [Vehicle(line) for line in f]
             
     def search(self, descriptor):
+        """
+            Searches the car shipment for a string, if so it is included in the filtered list
+            
+            Side effects:
+                - Appends to a new list if condition is met
+                
+            Returns:
+                filtered_list (list): List of items that includes a string
+        """
         filtered_list = [car for car in self.car_shipment if descriptor in car]
         return filtered_list       
         
@@ -43,7 +59,7 @@ class Dealership:
             
             Args:
                 x (optionl):A date if you would actually like to specify. Could be handy if you
-                are planning to buy a car that dar
+                are planning to buy a car that day
             
             Returns:
                 True or False: Depending on the currrent day and month
