@@ -1,0 +1,12 @@
+CAR PURCHASE RECEIPT
+---------------------------------
+Date of Purchase: 12/14/21
+Customer Name: Thomas
+Customer Age: 10
+Customer Income: $10000000
+
+Car Purchased: 2017 Toyota RAV4
+Default MSRP: $24000
+Calculated Monthly Payment Required + Interest:  $366.0
+
+Thank you for your purchase!
