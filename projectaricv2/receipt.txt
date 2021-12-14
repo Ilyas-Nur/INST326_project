@@ -1,4 +1,0 @@
-Monthly Payment:  686.0
-Customer Name:  thomas
-Car Purchased:  2022 Tesla Model 3
-Time of Purchase: 
